@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftab | Developer Portfolio</title>
+    <meta name="description" content="Aftab's developer portfolio — explore my projects, tools, and experiments on GitHub.">
+    <meta name="author" content="Aftab">
+    <meta property="og:title" content="Aftab | Developer Portfolio">
+    <meta property="og:description" content="Explore my projects and work on GitHub.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-particles" id="particles"></div>
+    <div class="bg-gradient-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Aftab<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="nav-github">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-links">
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+            <li>
+                <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="mobile-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Open to collaborate</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Hey there, I'm</span>
+                <span class="title-name">Aftab</span>
+                <span class="title-line title-sub">I build things that live on the internet</span>
+            </h1>
+            <p class="hero-description">
+                Developer &amp; creator — I love turning ideas into real projects.
+                From real-time chat apps to browser games, explore everything I've built.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    <span>View My Work</span>
+                </a>
+                <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub Profile</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" id="statRepos">0</span>
+                    <span class="stat-label">Repositories</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" id="statStars">0</span>
+                    <span class="stat-label">Stars Earned</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" id="statForks">0</span>
+                    <span class="stat-label">Forks</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="code-title">aftab.js</span>
+                </div>
+                <div class="code-body">
+                    <pre><code><span class="ln">1</span>  <span class="code-keyword">const</span> <span class="code-variable">aftab</span> = {
+<span class="ln">2</span>    <span class="code-property">name</span>: <span class="code-string">"Aftab"</span>,
+<span class="ln">3</span>    <span class="code-property">role</span>: <span class="code-string">"Developer"</span>,
+<span class="ln">4</span>    <span class="code-property">loves</span>: [
+<span class="ln">5</span>      <span class="code-string">"Building apps"</span>,
+<span class="ln">6</span>      <span class="code-string">"Open source"</span>,
+<span class="ln">7</span>      <span class="code-string">"Problem solving"</span>
+<span class="ln">8</span>    ],
+<span class="ln">9</span>    <span class="code-property">coffee</span>: <span class="code-boolean">true</span>,
+<span class="ln">10</span>
+<span class="ln">11</span>   <span class="code-function">greet</span>() {
+<span class="ln">12</span>     <span class="code-keyword">return</span> <span class="code-string">"Welcome to my world!"</span>;
+<span class="ln">13</span>   }
+<span class="ln">14</span> };
+<span class="ln">15</span>
+<span class="ln">16</span> <span class="code-variable">aftab</span>.<span class="code-function">greet</span>();
+<span class="ln">17</span> <span class="code-comment">// → "Welcome to my world!"</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-code"></i> Portfolio</span>
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">Things I've built — from apps to experiments and everything in between</p>
+            </div>
+
+            <!-- Filter -->
+            <div class="filter-bar reveal">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="filter-btn" data-filter="featured">
+                    <i class="fas fa-star"></i> Featured
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-globe"></i> Web
+                </button>
+                <button class="filter-btn" data-filter="tool">
+                    <i class="fas fa-wrench"></i> Tools
+                </button>
+                <button class="filter-btn" data-filter="game">
+                    <i class="fas fa-gamepad"></i> Games
+                </button>
+                <button class="filter-btn" data-filter="other">
+                    <i class="fas fa-layer-group"></i> Other
+                </button>
+            </div>
+
+            <!-- Grid -->
+            <div class="projects-grid" id="projectsGrid"></div>
+
+            <div class="projects-empty" id="projectsEmpty" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>No projects found in this category.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-user"></i> About</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content reveal">
+                <div class="about-text">
+                    <p>
+                        I'm <strong>Aftab</strong> — a developer who loves crafting 
+                        things with code. Whether it's a real-time chat app, a browser 
+                        game, or a system-level tool, I enjoy the entire journey from 
+                        idea to deployment.
+                    </p>
+                    <p>
+                        I believe in learning by building. Every project teaches 
+                        something new, and I share all my work openly on GitHub. 
+                        If something I built helps you or sparks an idea — that's a win.
+                    </p>
+                    <div class="tech-stack">
+                        <h3><i class="fas fa-tools"></i> Tech I Work With</h3>
+                        <div class="tech-tags" id="techTags"></div>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="github-card">
+                        <div class="gh-card-header">
+                            <img src="https://avatars.githubusercontent.com/u/0?v=4" alt="Aftab" class="gh-avatar" id="ghAvatar">
+                            <div>
+                                <h3 id="ghName">Aftab</h3>
+                                <p id="ghBio">Developer</p>
+                            </div>
+                        </div>
+                        <div class="gh-card-stats">
+                            <div class="gh-stat">
+                                <i class="fas fa-book"></i>
+                                <span id="ghRepos">—</span>
+                                <small>Repos</small>
+                            </div>
+                            <div class="gh-stat">
+                                <i class="fas fa-users"></i>
+                                <span id="ghFollowers">—</span>
+                                <small>Followers</small>
+                            </div>
+                            <div class="gh-stat">
+                                <i class="fas fa-user-plus"></i>
+                                <span id="ghFollowing">—</span>
+                                <small>Following</small>
+                            </div>
+                        </div>
+                        <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="gh-card-link">
+                            <i class="fab fa-github"></i> View Full Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-paper-plane"></i> Contact</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Want to collaborate or just say hi? Reach out!</p>
+            </div>
+            <div class="contact-links reveal">
+                <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon github-bg">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Check out my repos</p>
+                    <span class="contact-handle">@1-aftab</span>
+                </a>
+                <a 
