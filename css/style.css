@@ -215,27 +215,16 @@ button {
 }
 
 .nav-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
     font-size: 1.35rem;
     font-weight: 800;
     letter-spacing: -0.5px;
     transition: var(--transition);
 }
 
-.site-logo {
-    width: 31px;
-    height: 31px;
-    flex: 0 0 31px;
-    display: block;
-    filter: drop-shadow(0 0 7px rgba(108, 99, 255, 0.42));
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.nav-logo:hover .site-logo {
-    transform: rotate(-7deg) scale(1.07);
-    filter: drop-shadow(0 0 12px rgba(108, 99, 255, 0.8));
+.logo-bracket {
+    color: var(--accent-1);
+    font-family: var(--font-mono);
+    font-weight: 700;
 }
 
 .nav-logo:hover { color: var(--accent-1); }
@@ -1432,23 +1421,6 @@ button {
     gap: 30px;
     align-items: center;
 }
-.footer-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.site-logo-footer {
-    width: 26px;
-    height: 26px;
-    flex-basis: 26px;
-}
-
-.footer-logo:hover .site-logo-footer {
-    transform: rotate(-7deg) scale(1.06);
-    filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.7));
-}
-
 .footer-logo {
     font-size: 1.15rem;
     font-weight: 800;
