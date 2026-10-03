@@ -74,19 +74,22 @@ const BUSINESS_DEMOS = [
         title: "Café / Restaurant",
         description: "A polished concept for a local café or restaurant with menu highlights, opening hours, location and direct contact.",
         tags: ["Demo Concept", "Menu", "Responsive"],
-        category: "business", icon: "fas fa-mug-hot", language: "HTML / CSS", languageColor: "#e34c26"
+        category: "business", icon: "fas fa-mug-hot", language: "HTML / CSS", languageColor: "#e34c26",
+        liveUrl: "https://noir-brew-nine.vercel.app/"
     },
     {
         title: "Gym / Fitness",
         description: "A bold concept for a local gym with plans, facilities, timings and a simple enquiry path.",
         tags: ["Demo Concept", "Fitness", "Landing Page"],
-        category: "business", icon: "fas fa-dumbbell", language: "HTML / CSS", languageColor: "#6c63ff"
+        category: "business", icon: "fas fa-dumbbell", language: "HTML / CSS", languageColor: "#6c63ff",
+        liveUrl: "https://forge-fytness.vercel.app/"
     },
     {
         title: "Hotel / Guest House",
         description: "A clean hospitality concept with rooms, amenities, location and enquiry sections for a local property.",
         tags: ["Demo Concept", "Hospitality", "Responsive"],
-        category: "business", icon: "fas fa-hotel", language: "HTML / CSS", languageColor: "#9f7aea"
+        category: "business", icon: "fas fa-hotel", language: "HTML / CSS", languageColor: "#9f7aea",
+        liveUrl: "https://pinecrest-guesthouse.vercel.app/"
     }
 ];
 
@@ -216,7 +219,7 @@ async function loadPortfolio() {
             });
 
         allProjects = [...BUSINESS_DEMOS.map(d => ({
-            ...d, repoUrl: "", liveUrl: "", stars: 0, forks: 0, featured: true, isDemo: true
+            ...d, repoUrl: "", stars: 0, forks: 0, featured: true, isDemo: true
         })), ...githubProjects];
 
         animateCounter($('#statRepos'), githubProjects.length);
@@ -224,7 +227,7 @@ async function loadPortfolio() {
     } catch (err) {
         console.error("GitHub fetch error:", err);
         allProjects = BUSINESS_DEMOS.map(d => ({
-            ...d, repoUrl: "", liveUrl: "", stars: 0, forks: 0, featured: true, isDemo: true
+            ...d, repoUrl: "", stars: 0, forks: 0, featured: true, isDemo: true
         }));
         renderProjects('all');
 
@@ -255,9 +258,11 @@ function renderProjects(filter) {
 
     projectsGrid.innerHTML = filtered.map((p, i) => {
         const action = p.isDemo
-            ? `<button class="project-action project-action-disabled" type="button" disabled title="Demo concept — live preview will be added when the concept is built">
-                   <i class="fas fa-eye"></i><span>Live Demo · Coming soon</span>
-               </button>`
+            ? `<div class="project-links">
+                   <a href="${p.liveUrl || '#'}" target="_blank" rel="noopener noreferrer" class="project-link" title="Live Demo" ${p.liveUrl ? '' : 'aria-disabled="true"'}>
+                       <i class="fas fa-external-link-alt"></i>
+                   </a>
+               </div>`
             : `<div class="project-links">
                    <a href="${p.repoUrl}" target="_blank" rel="noopener noreferrer" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
                    ${p.liveUrl ? `<a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>` : ''}
