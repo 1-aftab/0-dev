@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Aftab logo</title>
+  <desc id="desc">A minimal futuristic A monogram</desc>
+  <defs>
+    <linearGradient id="g" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6c63ff"/>
+      <stop offset="0.55" stop-color="#8b7cff"/>
+      <stop offset="1" stop-color="#39d9ff"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 7 8.5 56h10.2l4.1-9.1h18.4l4.1 9.1h10.2L32 7Z" fill="none" stroke="url(#g)" stroke-width="5.5" stroke-linejoin="round"/>
+  <path d="M25.7 38.3h12.6L32 24.1l-6.3 14.2Z" fill="url(#g)"/>
+  <path d="M13 48.5 51 15.5" fill="none" stroke="#ffffff" stroke-opacity=".72" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
