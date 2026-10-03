@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aftab | Developer Portfolio</title>
-    <meta name="description" content="Aftab's developer portfolio — explore my projects, tools, and experiments on GitHub.">
+    <title>Aftab | Websites for Businesses & Developers</title>
+    <meta name="description" content="Aftab builds modern, responsive and affordable websites for local businesses, creators and personal projects.">
     <meta name="author" content="Aftab">
-    <meta property="og:title" content="Aftab | Developer Portfolio">
-    <meta property="og:description" content="Explore my projects and work on GitHub.">
+    <meta property="og:title" content="Aftab | Modern Websites for Your Business">
+    <meta property="og:description" content="Modern, responsive websites built by Aftab for businesses, creators and projects.">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,22 +16,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
-    <!-- Animated Background -->
+    <!-- Existing animated background -->
     <div class="bg-particles" id="particles"></div>
     <div class="bg-gradient-orbs">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
     </div>
-
-    <!-- Cursor Glow -->
     <div class="cursor-glow" id="cursorGlow"></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
+            <a href="#home" class="nav-logo">
                 <span class="logo-bracket">&lt;</span>Aftab<span class="logo-bracket"> /&gt;</span>
             </a>
             <ul class="nav-links">
@@ -39,15 +36,13 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link nav-business-cta">Get a Website</a></li>
             </ul>
             <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="nav-github">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
+                <i class="fab fa-github"></i><span>GitHub</span>
             </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
@@ -58,265 +53,245 @@
             <li><a href="#home" class="mobile-link">Home</a></li>
             <li><a href="#projects" class="mobile-link">Projects</a></li>
             <li><a href="#about" class="mobile-link">About</a></li>
-            <li><a href="#contact" class="mobile-link">Contact</a></li>
-            <li>
-                <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="mobile-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </li>
+            <li><a href="#contact" class="mobile-link mobile-cta-link">Get a Website</a></li>
+            <li><a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="mobile-link"><i class="fab fa-github"></i> GitHub</a></li>
         </ul>
     </div>
 
-    <!-- ==================== HERO ==================== -->
+    <!-- HERO -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                <span>Open to collaborate</span>
+                <span>Websites for businesses & creators</span>
             </div>
             <h1 class="hero-title">
-                <span class="title-line">Hey there, I'm</span>
-                <span class="title-name">Aftab</span>
-                <span class="title-line title-sub">I build things that live on the internet</span>
+                <span class="title-line">Hey, I'm Aftab.</span>
+                <span class="title-name">Modern Websites.<br>Built for Your Business.</span>
             </h1>
             <p class="hero-description">
-                Developer &amp; creator — I love turning ideas into real projects.
-                From real-time chat apps to browser games, explore everything I've built.
+                I build modern, responsive websites for businesses and creators — designed to look great,
+                work smoothly and give your customers an easy way to find you.
             </p>
             <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i>
-                    <span>View My Work</span>
-                </a>
-                <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub Profile</span>
-                </a>
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-eye"></i><span>View Demo Websites</span></a>
+                <a href="#contact" class="btn btn-secondary"><i class="fas fa-arrow-right"></i><span>Get a Website</span></a>
             </div>
+            <div class="hero-price"><i class="fas fa-tag"></i> Websites starting from <strong>₹699</strong></div>
             <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number" id="statRepos">0</span>
-                    <span class="stat-label">Repositories</span>
-                </div>
+                <div class="stat"><span class="stat-number" id="statRepos">0</span><span class="stat-label">Projects</span></div>
                 <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number" id="statStars">0</span>
-                    <span class="stat-label">Stars Earned</span>
-                </div>
+                <div class="stat"><span class="stat-number">₹699</span><span class="stat-label">Starting Price</span></div>
                 <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number" id="statForks">0</span>
-                    <span class="stat-label">Forks</span>
-                </div>
+                <div class="stat"><span class="stat-number">100%</span><span class="stat-label">Responsive</span></div>
             </div>
         </div>
+
         <div class="hero-visual">
             <div class="code-window">
                 <div class="code-header">
-                    <div class="code-dots">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
+                    <div class="code-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
                     <span class="code-title">aftab.js</span>
                 </div>
                 <div class="code-body">
-                    <pre><code><span class="ln">1</span>  <span class="code-keyword">const</span> <span class="code-variable">aftab</span> = {
-<span class="ln">2</span>    <span class="code-property">name</span>: <span class="code-string">"Aftab"</span>,
-<span class="ln">3</span>    <span class="code-property">role</span>: <span class="code-string">"Developer"</span>,
-<span class="ln">4</span>    <span class="code-property">loves</span>: [
-<span class="ln">5</span>      <span class="code-string">"Building apps"</span>,
-<span class="ln">6</span>      <span class="code-string">"Open source"</span>,
-<span class="ln">7</span>      <span class="code-string">"Problem solving"</span>
-<span class="ln">8</span>    ],
-<span class="ln">9</span>    <span class="code-property">coffee</span>: <span class="code-boolean">true</span>,
-<span class="ln">10</span>
-<span class="ln">11</span>   <span class="code-function">greet</span>() {
-<span class="ln">12</span>     <span class="code-keyword">return</span> <span class="code-string">"Welcome to my world!"</span>;
-<span class="ln">13</span>   }
-<span class="ln">14</span> };
-<span class="ln">15</span>
-<span class="ln">16</span> <span class="code-variable">aftab</span>.<span class="code-function">greet</span>();
-<span class="ln">17</span> <span class="code-comment">// → "Welcome to my world!"</span></code></pre>
+<pre><code><span class="ln">1</span>  <span class="code-keyword">const</span> <span class="code-variable">aftab</span> = {
+<span class="ln">2</span>    <span class="code-property">role</span>: <span class="code-string">"Developer + Creator"</span>,
+<span class="ln">3</span>    <span class="code-property">builds</span>: [
+<span class="ln">4</span>      <span class="code-string">"Business websites"</span>,
+<span class="ln">5</span>      <span class="code-string">"Web apps"</span>,
+<span class="ln">6</span>      <span class="code-string">"Ideas → working projects"</span>
+<span class="ln">7</span>    ],
+<span class="ln">8</span>    <span class="code-property">focus</span>: <span class="code-string">"Fast · Responsive · Clean"</span>,
+<span class="ln">9</span>    <span class="code-property">startingAt</span>: <span class="code-string">"₹699"</span>
+<span class="ln">10</span> };
+<span class="ln">11</span>
+<span class="ln">12</span> <span class="code-variable">aftab</span>.<span class="code-function">build</span>(<span class="code-string">"your idea"</span>);</code></pre>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== PROJECTS ==================== -->
+    <!-- WHY A WEBSITE -->
+    <section class="value-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-sparkles"></i> Why a website?</span>
+                <h2 class="section-title">Give Your Business a Place Online</h2>
+                <p class="section-subtitle">A simple website can make it easier for people to understand what you do and reach you.</p>
+            </div>
+            <div class="value-grid">
+                <article class="info-card reveal"><div class="info-icon"><i class="fas fa-circle-check"></i></div><h3>Look professional</h3><p>Give customers a clear, polished first impression when they search for your business.</p></article>
+                <article class="info-card reveal"><div class="info-icon"><i class="fas fa-location-dot"></i></div><h3>Be easy to discover</h3><p>Put your services, location and important details in one place people can access anytime.</p></article>
+                <article class="info-card reveal"><div class="info-icon"><i class="fas fa-list-check"></i></div><h3>Show what you offer</h3><p>Explain your services, products or work without making customers hunt through messages.</p></article>
+                <article class="info-card reveal"><div class="info-icon"><i class="fas fa-message"></i></div><h3>Make contact simple</h3><p>Add the contact options your customers actually use, from email to direct messaging.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="process-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-route"></i> Simple process</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">No complicated process. Just tell me what you need and we build from there.</p>
+            </div>
+            <div class="process-grid">
+                <article class="process-step reveal"><span class="process-number">01</span><div><h3>Discuss</h3><p>Tell me about your business and what you need.</p></div></article>
+                <article class="process-step reveal"><span class="process-number">02</span><div><h3>Build</h3><p>I design and build the website around your business.</p></div></article>
+                <article class="process-step reveal"><span class="process-number">03</span><div><h3>Launch</h3><p>Your website goes live and is ready for customers.</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-layer-group"></i> Services</span>
+                <h2 class="section-title">What I Can Build</h2>
+                <p class="section-subtitle">Choose a simple starting point, or tell me what your project needs.</p>
+            </div>
+            <div class="service-grid">
+                <article class="service-card reveal"><div class="service-icon"><i class="fas fa-store"></i></div><h3>Business Websites</h3><p>Modern websites for cafés, shops, salons, gyms, hotels, creators and other local businesses.</p><span class="service-label">From ₹699</span></article>
+                <article class="service-card reveal"><div class="service-icon"><i class="fas fa-window-maximize"></i></div><h3>Landing Pages</h3><p>Simple one-page websites for businesses that mainly need a clean online presence.</p><span class="service-label">From ₹699</span></article>
+                <article class="service-card reveal"><div class="service-icon"><i class="fas fa-code"></i></div><h3>Custom Websites</h3><p>More customized websites with additional pages, features and functionality.</p><span class="service-label">From ₹3,000+</span></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag"><i class="fas fa-receipt"></i> Pricing</span>
+                <h2 class="section-title">Simple Starting Prices</h2>
+                <p class="section-subtitle">Straightforward packages. If your requirements are different, we can discuss them before building.</p>
+            </div>
+            <div class="pricing-grid">
+                <article class="price-card reveal"><div class="price-top"><span class="price-kicker">STARTER</span><span class="price-amount">₹699</span></div><p class="price-description">A clean one-page presence for a business that needs the essentials online.</p><ul class="price-list"><li>One-page website</li><li>Mobile responsive</li><li>Business information</li><li>Contact / WhatsApp button</li><li>Location section</li><li>Basic animations</li><li>Free Vercel subdomain</li></ul><a href="#contact" class="btn btn-secondary price-btn">Get a Website <i class="fas fa-arrow-right"></i></a></article>
+                <article class="price-card price-card-featured reveal"><div class="price-top"><span class="price-kicker">CUSTOM DOMAIN</span><span class="price-amount">₹1,999</span></div><p class="price-description">A more customized presence with your own domain and room for additional content.</p><ul class="price-list"><li>Everything in Starter</li><li>Custom domain</li><li>More customization</li><li>Improved visual design</li><li>Multiple sections/pages where appropriate</li></ul><a href="#contact" class="btn btn-primary price-btn">Get a Website <i class="fas fa-arrow-right"></i></a></article>
+                <article class="price-card reveal"><div class="price-top"><span class="price-kicker">CUSTOM</span><span class="price-amount">₹3,000+</span></div><p class="price-description">For projects that need a custom design, more pages or extra functionality.</p><ul class="price-list"><li>Custom design</li><li>Additional pages</li><li>Advanced functionality</li><li>Special animations / features</li><li>Requirements discussed individually</li></ul><a href="#contact" class="btn btn-secondary price-btn">Discuss Your Project <i class="fas fa-arrow-right"></i></a></article>
+            </div>
+            <p class="pricing-note reveal"><i class="fas fa-circle-info"></i> Domain registration/renewal and other third-party recurring costs may be separate where applicable.</p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
     <section class="projects" id="projects">
         <div class="section-container">
             <div class="section-header reveal">
                 <span class="section-tag"><i class="fas fa-code"></i> Portfolio</span>
-                <h2 class="section-title">My Projects</h2>
-                <p class="section-subtitle">Things I've built — from apps to experiments and everything in between</p>
+                <h2 class="section-title">Things I've Built</h2>
+                <p class="section-subtitle">Real projects, experiments and business website concepts. Demo businesses are clearly marked as concepts.</p>
             </div>
-
-            <!-- Filter -->
+            <div class="business-showcase reveal">
+                <div><span class="showcase-kicker">BUSINESS WEBSITE DEMOS</span><h3>Want to see what a business site could look like?</h3><p>Browse demo concepts for cafés, salons, gyms, stays and local services. These are fictional examples until an actual client project is added.</p></div>
+                <a href="#projectsGrid" class="showcase-link" id="businessDemoLink">View demos <i class="fas fa-arrow-down"></i></a>
+            </div>
             <div class="filter-bar reveal">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th"></i> All
-                </button>
-                <button class="filter-btn" data-filter="featured">
-                    <i class="fas fa-star"></i> Featured
-                </button>
-                <button class="filter-btn" data-filter="web">
-                    <i class="fas fa-globe"></i> Web
-                </button>
-                <button class="filter-btn" data-filter="tool">
-                    <i class="fas fa-wrench"></i> Tools
-                </button>
-                <button class="filter-btn" data-filter="game">
-                    <i class="fas fa-gamepad"></i> Games
-                </button>
-                <button class="filter-btn" data-filter="other">
-                    <i class="fas fa-layer-group"></i> Other
-                </button>
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-th"></i> All</button>
+                <button class="filter-btn business-filter" data-filter="business"><i class="fas fa-store"></i> Business Websites</button>
+                <button class="filter-btn" data-filter="featured"><i class="fas fa-star"></i> Featured</button>
+                <button class="filter-btn" data-filter="web"><i class="fas fa-globe"></i> Web</button>
+                <button class="filter-btn" data-filter="app"><i class="fas fa-mobile-screen-button"></i> Apps</button>
+                <button class="filter-btn" data-filter="tool"><i class="fas fa-wrench"></i> Tools</button>
+                <button class="filter-btn" data-filter="game"><i class="fas fa-gamepad"></i> Games</button>
+                <button class="filter-btn" data-filter="other"><i class="fas fa-layer-group"></i> Other</button>
             </div>
-
-            <!-- Grid -->
             <div class="projects-grid" id="projectsGrid"></div>
+            <div class="projects-empty" id="projectsEmpty" style="display:none;"><i class="fas fa-search"></i><p>No projects found in this category.</p></div>
+        </div>
+    </section>
 
-            <div class="projects-empty" id="projectsEmpty" style="display: none;">
-                <i class="fas fa-search"></i>
-                <p>No projects found in this category.</p>
+    <!-- CTA -->
+    <section class="business-cta-section">
+        <div class="section-container">
+            <div class="business-cta-card reveal">
+                <div><span class="section-tag"><i class="fas fa-sparkles"></i> Build with Aftab</span><h2>Have a business that needs a website?</h2><p>Let's turn your idea into a fast, modern website that looks great on every device.</p></div>
+                <a href="#contact" class="btn btn-primary">Get a Website <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- ==================== ABOUT ==================== -->
+    <!-- ABOUT -->
     <section class="about" id="about">
         <div class="section-container">
             <div class="section-header reveal">
                 <span class="section-tag"><i class="fas fa-user"></i> About</span>
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title">Developer + Website Creator</h2>
             </div>
-            <div class="about-content reveal">
+            <div class="about-content about-content-revamped reveal">
                 <div class="about-text">
-                    <p>
-                        I'm <strong>Aftab</strong> — a developer who loves crafting 
-                        things with code. Whether it's a real-time chat app, a browser 
-                        game, or a system-level tool, I enjoy the entire journey from 
-                        idea to deployment.
-                    </p>
-                    <p>
-                        I believe in learning by building. Every project teaches 
-                        something new, and I share all my work openly on GitHub. 
-                        If something I built helps you or sparks an idea — that's a win.
-                    </p>
-                    <div class="tech-stack">
-                        <h3><i class="fas fa-tools"></i> Tech I Work With</h3>
-                        <div class="tech-tags" id="techTags"></div>
-                    </div>
+                    <p>I'm <strong>Aftab</strong> — a developer who enjoys crafting things with code. Whether it's a real-time chat app, a browser game, a tool or a website, I like taking an idea and turning it into something that actually works.</p>
+                    <p>I learn by building, experimenting and improving. My portfolio includes personal projects and open-source work, and I'm also creating modern websites for businesses that want a simple, polished place online.</p>
+                    <p>If you have a business, idea or project in mind, tell me what you need and we can figure out the right scope before anything is built.</p>
+                    <div class="tech-stack"><h3><i class="fas fa-tools"></i> Tech I Work With</h3><div class="tech-tags" id="techTags"></div></div>
                 </div>
-                <div class="about-card">
-                    <div class="github-card">
-                        <div class="gh-card-header">
-                            <img src="https://avatars.githubusercontent.com/u/0?v=4" alt="Aftab" class="gh-avatar" id="ghAvatar">
-                            <div>
-                                <h3 id="ghName">Aftab</h3>
-                                <p id="ghBio">Developer</p>
-                            </div>
-                        </div>
-                        <div class="gh-card-stats">
-                            <div class="gh-stat">
-                                <i class="fas fa-book"></i>
-                                <span id="ghRepos">—</span>
-                                <small>Repos</small>
-                            </div>
-                            <div class="gh-stat">
-                                <i class="fas fa-users"></i>
-                                <span id="ghFollowers">—</span>
-                                <small>Followers</small>
-                            </div>
-                            <div class="gh-stat">
-                                <i class="fas fa-user-plus"></i>
-                                <span id="ghFollowing">—</span>
-                                <small>Following</small>
-                            </div>
-                        </div>
-                        <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="gh-card-link">
-                            <i class="fab fa-github"></i> View Full Profile
-                        </a>
-                    </div>
+                <div class="about-side-card">
+                    <div class="about-mini-icon"><i class="fas fa-terminal"></i></div>
+                    <span class="mini-kicker">CURRENTLY BUILDING</span>
+                    <h3>Ideas → interfaces → working projects</h3>
+                    <p>From a small landing page to a full web experiment, I care about the details that make a site feel finished.</p>
+                    <div class="mini-pills"><span>Responsive</span><span>Modern UI</span><span>Clean code</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== CONTACT ==================== -->
+    <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="section-container">
             <div class="section-header reveal">
                 <span class="section-tag"><i class="fas fa-paper-plane"></i> Contact</span>
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Want to collaborate or just say hi? Reach out!</p>
+                <h2 class="section-title">Let's Build Something.</h2>
+                <p class="section-subtitle">Have a business, idea or project in mind? Tell me what you need.</p>
             </div>
-            <div class="contact-links reveal">
-                <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon github-bg">
-                        <i class="fab fa-github"></i>
+            <div class="contact-layout">
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-grid">
+                        <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+                        <label><span>Business name</span><input type="text" name="business" placeholder="Your business (optional)"></label>
+                        <label><span>Business type</span><input type="text" name="type" placeholder="Café, salon, shop, creator..."></label>
+                        <label><span>Contact information</span><input type="text" name="contact" placeholder="Email / phone / Instagram" required></label>
                     </div>
-                    <h3>GitHub</h3>
-                    <p>Check out my repos</p>
-                    <span class="contact-handle">@1-aftab</span>
-                </a>
-                <a href="https://www.instagram.com/aff_tab_" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon instagram-bg">
-                        <i class="fab fa-instagram"></i>
+                    <label><span>What do you need?</span><textarea name="message" rows="5" placeholder="Tell me what you want the website to do..." required></textarea></label>
+                    <button type="submit" class="btn btn-primary form-submit">Get a Website <i class="fas fa-paper-plane"></i></button>
+                    <p class="form-note"><i class="fas fa-circle-info"></i> Submitting opens your email app with the details filled in. No fake backend or silent form submission.</p>
+                </form>
+                <div class="contact-side reveal">
+                    <div class="contact-card contact-card-featured">
+                        <div class="contact-icon email-bg"><i class="fas fa-envelope"></i></div>
+                        <h3>Email</h3><p>For website enquiries and project details</p>
+                        <span class="contact-handle">aftablone100@gmail.com</span>
+                        <a href="mailto:aftablone100@gmail.com" class="contact-direct">Email me <i class="fas fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <h3>Instagram</h3>
-                    <p>Follow my journey</p>
-                    <span class="contact-handle">@aff_tab_</span>
-                </a>
+                    <a href="https://www.instagram.com/aff_tab_" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon instagram-bg"><i class="fab fa-instagram"></i></div>
+                        <h3>Instagram</h3><p>Another way to reach me</p><span class="contact-handle">@aff_tab_</span>
+                    </a>
+                    <div class="whatsapp-note"><i class="fab fa-whatsapp"></i><div><strong>Prefer WhatsApp?</strong><span>Add your WhatsApp link/number in <code>main.js</code> before publishing if you want direct messaging here.</span></div></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="#" class="footer-logo">
-                        <span class="logo-bracket">&lt;</span>Aftab<span class="logo-bracket"> /&gt;</span>
-                    </a>
-                    <p>Building the web, one project at a time.</p>
-                </div>
-                <div class="footer-nav">
-                    <a href="#home">Home</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-socials">
-                    <a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.instagram.com/aff_tab_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
+                <div class="footer-brand"><a href="#home" class="footer-logo"><span class="logo-bracket">&lt;</span>Aftab<span class="logo-bracket"> /&gt;</span></a><p>Building the web, one project at a time.</p></div>
+                <div class="footer-nav"><a href="#home">Home</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a><a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                <div class="footer-socials"><a href="https://github.com/1-aftab" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.instagram.com/aff_tab_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="mailto:aftablone100@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></div>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
-                <p class="footer-copyright">
-                    &copy; <span id="currentYear"></span> Aftab. All rights reserved.
-                </p>
-                <p class="footer-dev">
-                    <span class="dev-tag">
-                        <span class="dev-bracket">{</span>
-                        <span class="dev-label"> dev</span> : 
-                        <span class="dev-name">Aftab</span>
-                        <span class="dev-bracket"> }</span>
-                    </span>
-                    <span class="dev-heart"><i class="fas fa-heart"></i></span>
-                </p>
+                <p class="footer-copyright">&copy; <span id="currentYear"></span> Aftab. All rights reserved.</p>
+                <p class="footer-dev"><span class="dev-tag"><span class="dev-bracket">{</span><span class="dev-label"> dev</span> : <span class="dev-name">Aftab</span><span class="dev-bracket"> }</span></span><span class="dev-heart"><i class="fas fa-heart"></i></span></p>
             </div>
         </div>
     </footer>
-
-    <!-- Scroll To Top -->
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
     <script src="js/main.js"></script>
 </body>
 </html>
