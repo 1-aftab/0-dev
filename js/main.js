@@ -6,11 +6,33 @@
 const GITHUB_USERNAME = "1-aftab";
 const CONTACT_EMAIL = "aftablone100@gmail.com";
 
-// Optional: add your WhatsApp number in international format, e.g. "9198XXXXXXXX"
-// Leave blank until you have a number/link you want published.
-const WHATSAPP_NUMBER = "";
+// WhatsApp number used by the direct-contact button.
+const WHATSAPP_NUMBER = "917051002210";
 
-const EXCLUDED_REPOS = [];
+// Only showcase the repositories below on the portfolio.
+// Matching ignores spaces, hyphens and underscores, so repo naming can vary slightly.
+const FEATURED_REPO_ALIASES = {
+    systemsfiles: {
+        description: "A practical system/files project built around useful file-management functionality.",
+        category: "tool", featured: true, icon: "fas fa-folder-open"
+    },
+    minimusic: {
+        description: "A lightweight music project focused on a simple, enjoyable listening experience.",
+        category: "app", featured: true, icon: "fas fa-music"
+    },
+    sevendeadlyduel: {
+        description: "An interactive browser-based duel game inspired by the Seven Deadly Sins.",
+        category: "game", featured: true, icon: "fas fa-gamepad"
+    },
+    sevendedeadlyduels: {
+        description: "An interactive browser-based duel game inspired by the Seven Deadly Sins.",
+        category: "game", featured: true, icon: "fas fa-gamepad"
+    },
+    optivault: {
+        description: "A focused security and utility project built as part of my development experiments.",
+        category: "tool", featured: true, icon: "fas fa-shield-halved"
+    }
+};
 
 const CUSTOM_REPOS = {
     "Chatty": {
@@ -50,48 +72,21 @@ const CUSTOM_REPOS = {
 const BUSINESS_DEMOS = [
     {
         title: "Café / Restaurant",
-        description: "A warm, modern concept for a local café with menu highlights, location, opening hours and a direct contact CTA.",
-        tags: ["Demo Concept", "Responsive", "Menu"],
-        category: "business",
-        icon: "fas fa-mug-hot",
-        language: "HTML / CSS",
-        languageColor: "#e34c26"
-    },
-    {
-        title: "Barbershop / Salon",
-        description: "A clean booking-focused concept for a salon or barbershop with services, pricing, gallery space and contact details.",
-        tags: ["Demo Concept", "Services", "Mobile"],
-        category: "business",
-        icon: "fas fa-scissors",
-        language: "HTML / CSS",
-        languageColor: "#563d7c"
+        description: "A polished concept for a local café or restaurant with menu highlights, opening hours, location and direct contact.",
+        tags: ["Demo Concept", "Menu", "Responsive"],
+        category: "business", icon: "fas fa-mug-hot", language: "HTML / CSS", languageColor: "#e34c26"
     },
     {
         title: "Gym / Fitness",
-        description: "A bold landing-page concept for a local gym with plans, facilities, timings and an easy enquiry path.",
-        tags: ["Demo Concept", "Landing Page", "CTA"],
-        category: "business",
-        icon: "fas fa-dumbbell",
-        language: "HTML / CSS",
-        languageColor: "#6c63ff"
+        description: "A bold concept for a local gym with plans, facilities, timings and a simple enquiry path.",
+        tags: ["Demo Concept", "Fitness", "Landing Page"],
+        category: "business", icon: "fas fa-dumbbell", language: "HTML / CSS", languageColor: "#6c63ff"
     },
     {
         title: "Hotel / Guest House",
-        description: "A polished stay-focused concept with rooms, amenities, location and enquiry sections for a local property.",
+        description: "A clean hospitality concept with rooms, amenities, location and enquiry sections for a local property.",
         tags: ["Demo Concept", "Hospitality", "Responsive"],
-        category: "business",
-        icon: "fas fa-hotel",
-        language: "HTML / CSS",
-        languageColor: "#9f7aea"
-    },
-    {
-        title: "Local Service Business",
-        description: "A flexible concept for electricians, tutors, repair services, photographers and other local professionals.",
-        tags: ["Demo Concept", "Services", "Contact"],
-        category: "business",
-        icon: "fas fa-briefcase",
-        language: "HTML / CSS",
-        languageColor: "#c084fc"
+        category: "business", icon: "fas fa-hotel", language: "HTML / CSS", languageColor: "#9f7aea"
     }
 ];
 
@@ -162,6 +157,14 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ============================================================
    PROJECT DATA
    ============================================================ */
+function normalizeRepoName(name) {
+    return String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+const FEATURED_REPO_CONFIG = Object.fromEntries(
+    Object.entries(FEATURED_REPO_ALIASES).map(([key, value]) => [normalizeRepoName(key), value])
+);
+
 async function loadPortfolio() {
     projectsGrid.innerHTML = `
         <div class="loading-state" style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-muted)">
@@ -178,9 +181,9 @@ async function loadPortfolio() {
         const repos = await reposRes.json();
 
         const githubProjects = repos
-            .filter(r => !r.fork && !EXCLUDED_REPOS.includes(r.name))
+            .filter(r => !r.fork && FEATURED_REPO_CONFIG[normalizeRepoName(r.name)])
             .map(repo => {
-                const custom = CUSTOM_REPOS[repo.name] || {};
+                const custom = FEATURED_REPO_CONFIG[normalizeRepoName(repo.name)] || {};
                 const lang = (repo.language || "").toLowerCase();
                 const topics = repo.topics || [];
 
